@@ -5,7 +5,7 @@
 <odoo>
 
     <record model="ir.ui.view" id="product_attribute_exclude_matrix_form_view">
-        <field name="name">product.attribute.exclude.matrix.form (in product_combination_exclude)</field>
+        <field name="name">product.attribute.exclude.matrix.form (in product_attribute_exclusion)</field>
         <field name="model">product.attribute.exclude.matrix</field>
         <field name="arch" type="xml">
             <form>
@@ -37,7 +37,7 @@
     </record>
 
     <record model="ir.ui.view" id="product_attribute_exclude_matrix_search_view">
-        <field name="name">product.attribute.exclude.matrix.search (in product_combination_exclude)</field>
+        <field name="name">product.attribute.exclude.matrix.search (in product_attribute_exclusion)</field>
         <field name="model">product.attribute.exclude.matrix</field>
         <field name="arch" type="xml">
             <search>
@@ -49,7 +49,7 @@
     </record>
 
     <record model="ir.ui.view" id="product_attribute_exclude_matrix_tree_view">
-        <field name="name">product.attribute.exclude.matrix.tree (in product_combination_exclude)</field>
+        <field name="name">product.attribute.exclude.matrix.tree (in product_attribute_exclusion)</field>
         <field name="model">product.attribute.exclude.matrix</field>
         <field name="arch" type="xml">
             <tree>
