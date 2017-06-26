@@ -13,5 +13,10 @@ Available addons
 addon | version | summary
 --- | --- | ---
 [product_attribute_exclusion](product_attribute_exclusion/) | 10.0.1.0.0 | Exclude incompatible attribute combinations
+[product_attribute_group](product_attribute_group/) | 10.0.1.0.0 | Group attributes for easy management
+[product_attribute_priority](product_attribute_priority/) | 10.0.1.0.0 | Orders variants (unmaintained, just for compatibility with the code builder)
+[product_code_builder](product_code_builder/) | 10.0.1.0.0 | Systematic partcodes for variants
+
+
 
 [//]: # (end addons)
