@@ -6,11 +6,11 @@
     'name': 'Product Combination Exclude',
     'summary': "Allows the specification of incompatible product "
                "combinations when creating products",
-    'version': '10.0.1.0.0',
+    'version': '11.0.1.0.0',
     'license': 'AGPL-3',
-    'author': 'Graeme Gellatly,Odoo Community Association (OCA)',
-    'website': 'https://odoo-community.org',
-    'depends': ['product', 'sale'],
+    'author': 'Graeme Gellatly',
+    'website': 'https://o4sb.com',
+    'depends': ['product', 'sale', 'stock'],
     'data': [
         'security/product_attribute_exclude.xml',
         'security/product_attribute_exclude_matrix.xml',

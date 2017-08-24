@@ -9,7 +9,7 @@ class ProductAttributeExclude(models.Model):
 
     _name = 'product.attribute.exclude'
     _description = 'Product Attribute Exclude'
-    _rec_name = 'attribute_value_ids'
+    _rec_name = 'matrix_id'
 
     attribute_value_ids = fields.Many2many(
         comodel_name='product.attribute.value',

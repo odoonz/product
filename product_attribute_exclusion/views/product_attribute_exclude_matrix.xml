@@ -16,7 +16,7 @@
                     <button name="button_update_products"
                             type="object" string="Update Products"
                             attrs="{'invisible': [('product_tmpl_ids', '=', [])]}"
-                            confirm="This will update all associated templates to remove any exclusions. Continue?" />
+                            confirm="This will update all associated templates to remove any exclusions. Continue?"/>
                 </header>
                 <sheet>
                     <group>
@@ -41,7 +41,7 @@
         <field name="model">product.attribute.exclude.matrix</field>
         <field name="arch" type="xml">
             <search>
-                <field name="name" />
+                <field name="name"/>
                 <field name="product_tmpl_ids"/>
                 <field name="attribute_value_ids"/>
             </search>
@@ -68,11 +68,11 @@
         <field name="context">{}</field>
     </record>
 
-    <record model="ir.ui.menu" id="product_attribute_exclude_matrix_menu">
-        <field name="name">Attribute Exclusions</field>
-        <field name="parent_id" ref="sale.prod_config_main"/>
-        <field name="action" ref="product_attribute_exclude_matrix_act_window"/>
-        <field name="sequence" eval="17"/>
-    </record>
+    <menuitem
+            action="product_attribute_exclude_matrix_act_window" id="product_attribute_exclude_matrix_menu"
+            parent="sale.prod_config_main" sequence="17" groups="product.group_product_variant"/>
+    <menuitem
+            action="product_attribute_exclude_matrix_act_window" id="product_attribute_exclude_matrix_stock_menu"
+            parent="stock.menu_product_in_config_stock" sequence="17" groups="product.group_product_variant"/>
 
 </odoo>
