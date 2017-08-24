@@ -44,8 +44,8 @@
                 <field name="attribute_id" widget="selection"/>
                 <field name="value_ids"
                        context="{'show_attribute': False, 'default_attribute_id': attribute_id}"
-                       widget="many2many_tags" domain="[('attribute_id', '=', attribute_id)]" />
-                <button name="button_copy" type="object" string="Duplicate" icon="fa-copy" />
+                       widget="many2many_tags" domain="[('attribute_id', '=', attribute_id)]"/>
+                <button name="button_copy" type="object" string="Duplicate" icon="fa-copy"/>
             </tree>
         </field>
     </record>
@@ -65,5 +65,12 @@
         <field name="sequence" eval="6"/>
     </record>
 
+    <menuitem
+            action="product_attribute_group_act_window" id="product_attribute_group_menu"
+            parent="sale.prod_config_main" sequence="6" groups="product.group_product_variant"/>
+
+    <menuitem
+            action="product_attribute_group_act_window" id="product_attribute_group_stock_menu"
+            parent="stock.menu_product_in_config_stock" sequence="6" groups="product.group_product_variant"/>
 
 </odoo>

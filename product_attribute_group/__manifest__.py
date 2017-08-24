@@ -7,12 +7,12 @@
     'summary': """
         Allows grouping of product attributes for easy addition
         to a product template""",
-    'version': '10.0.1.0.0',
+    'version': '11.0.1.0.0',
     'license': 'AGPL-3',
-    'author': 'Odoo Community Association (OCA)',
-    'website': 'http://odoo-community.org',
+    'author': 'Graeme Gellatly',
+    'website': 'https://o4sb.com',
     'depends': [
-        'product', 'sale', 'sales_team'
+        'product', 'sale', 'sales_team', 'stock'
     ],
     'data': [
         'security/product_attribute_group.xml',

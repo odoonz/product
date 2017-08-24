@@ -9,7 +9,6 @@ class ProductAttributeLine(models.Model):
 
     _inherit = 'product.attribute.line'
 
-    name = fields.Char()
     attr_group_ids = fields.Many2many(
         comodel_name='product.attribute.group',
         string='Attribute Groups',
@@ -25,6 +24,18 @@ class ProductAttributeLine(models.Model):
         :return:
         """
         self.value_ids = self.attr_group_ids.mapped('value_ids')
+
+    @api.model
+    def create(self, vals):
+        if 'attr_group_ids' in vals:
+            if vals.get('attr_group_ids'):
+                attr_groups = self.env['product.attribute.group'].browse(
+                    vals['attr_group_ids'][0][2])
+                vals['value_ids'] = [
+                    [6, False, attr_groups.mapped('value_ids').ids]]
+            else:
+                vals['value_ids'] = []
+        return super(ProductAttributeLine, self).create(vals)
 
     @api.multi
     def write(self, vals):
